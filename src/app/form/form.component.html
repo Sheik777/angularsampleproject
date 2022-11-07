@@ -1,0 +1,27 @@
+<br><h1> BOOk PRODUCT</h1>
+
+<div>
+    <form [formGroup]="bookfrm" (ngSubmit)="addbook()">
+        <div>
+            <label for="bookName"> BookName:</label>
+            <input type="text" id="name" name="bookName" formControlName="bookname" >
+        </div><br>
+        <div>
+            <label for="author"> Author:</label>
+            <input type="text" id="aut" name="author" formControlName="bookauthor" >
+        </div><br>
+        <div>
+            <label for="bookprice"> Price: </label>
+            <input type="number" id="bp" name="bookprice" formControlName="bookprice" >
+        </div><br>
+        <div>
+            <label>Category:</label>
+            <select name="book" id="ctgry" formControlName="bookcatgry">
+                <option *ngFor="let cat of category">{{cat}}</option>
+            </select>
+        </div><br>
+        <div>
+            <button type="submit"[disabled]="!bookfrm.valid" > Add to Cart</button>
+        </div>
+    </form>
+</div>

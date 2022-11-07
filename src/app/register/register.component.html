@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\HP\Documents\angular\samplProj\src\app\register\register.component.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="hdr1">
+            <span>Welcome!</span><br>
+            <span class="cursor" (click)="signIn()"> log in</span><span class="hdrspn">|</span> <span class="cursor" (click)="register()">Register</span>
+        </div>
+
+        <div class="title"></div>
+
+    </div>
+    <div class="resform">
+        <div *ngIf="login==true">
+            <div>
+                <h1> Login </h1>
+            </div>
+
+            <form method="post">
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>password</label>
+                </div>
+                <div class="pass">Forgot password</div>
+                <div class="login">
+                    <input type="submit" value="Login">
+                </div>
+               
+                <div class="signup_link">
+                    Not a member? <a href="#">signup</a>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div *ngIf="regi==true">
+            <form method="post">
+                <h2>Sign up</h2>
+
+                <div class="fname">
+                    <label>First name</label><br>
+                    <input type="text" name="firstname" id="firstname" autofocus>
+                </div>
+                <div class="lname">
+                    <label>Last name</label><br>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div class="email">
+                    <label>Email</label><br>
+                    <input type="email" name="email" id="email">
+
+                </div>
+                <div class="radio">
+                    <input type="radio" name="genter" id="radio" value="Male">Male
+                    <input type="radio" name="genter" id="radio" value="Female">Female
+                </div>
+                <div class="cyloc">
+                    <label>City</label><br>
+                    <input type="text" name="city" id="city">
+
+                </div>
+                <div class="coloc">
+                    <label>Country</label><br>
+                    <select id="loc">
+                        <option>United Nations</option>
+                        <option>India</option>
+                        <option>Europe</option>
+                    </select>
+                </div>
+                <div class="crpass">
+                    <label>Create password</label><br>
+                    <input type="password" name="pass" id="crpass">
+                </div>
+                <div class="repass">
+                    <label>Repeat password</label><br>
+                    <input type="password" name="pass" id="repass">
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" id="submit" value="Register">
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <span>I am agree with</span><a href=""> terms and conditions</a>
+                </div>
+            </form>
+            <div class="login">
+                <p>Have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+       
+
+    </div>
+    <div class="footer">
+        <div class="terms">
+            <a href="">Terms and Conditions</a>
+        </div>
+        <div class="copyright">
+            <span>@copyright 2022 all rights reserved</span>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+

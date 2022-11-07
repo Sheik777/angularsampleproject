@@ -1,0 +1,56 @@
+<br><p *ngIf="data==true"> </p>
+<input type="radio" name="usertyp" (click)="showstudata()">Teacher;
+<input type="radio" name="usertyp" (click)="showstudata1()">student;
+
+
+<div *ngIf="usertype == 'Teacher'">
+    <h1 style="color: blue;"> Teacher data </h1>
+    <h2> Teacher Roll no : {{teacherdata.id}}</h2>
+    <h2> Teacher Name : {{teacherdata.name}}</h2>
+    <h2> TeacherClass : {{teacherdata.class}} </h2>
+    <h2> Teacher age : {{teacherdata.age}}</h2>
+
+</div>
+
+<div *ngIf="usertype == 'student'">
+    <h1 style="color: rgb(247, 138, 15);"> Student data </h1>
+    <h2> Roll no : {{studentdata.id}}</h2>
+    <h2> Name : {{studentdata.name}}</h2>
+    <h2> Class : {{studentdata.class}} </h2>
+    <h2> age : {{studentdata.age}}</h2>
+    <h2> number : {{studentdata.num}}</h2>
+</div>
+
+<h2 style="color:rgb(39, 182, 26) ;"> ngFor directives </h2>
+<ul>
+    <li *ngFor="let gam of games">
+        {{gam | uppercase}}
+
+    </li>
+</ul>
+
+<h2 style="color: red;"> Student Table </h2>
+<table>
+    <th>Roll no</th>
+    <th>name</th><br>
+     <th>class</th><br>
+     <th>age</th><br><br>
+    <th>number</th><br>
+    <tr *ngFor="let stud of studentData">
+        <td> {{stud.id}} </td>
+        <td> {{stud.name}} </td><br>
+        <td> {{stud.class}} </td><br>
+        <td> {{stud.age}} </td><br>
+        <td> {{stud.num}} </td><br>
+    </tr>
+</table>
+
+<h2 style="color: darkblue ;"> Using ng style</h2>
+<ul>
+    <li *ngFor="let mob of mobilelist" [ngStyle]="{color:getcolor(mob.brand)}">
+           {{mob.brand}},
+           {{mob.model}},
+           {{mob.sanpdragon}},
+    </li>
+</ul>
+

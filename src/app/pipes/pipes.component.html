@@ -1,0 +1,24 @@
+<h2>Uppercase</h2>
+<ul>
+    <li *ngFor="let lap of laptop">
+        {{lap | uppercase}}
+    </li>
+</ul>
+<h2>Lower case</h2>
+<ol>
+    <li *ngFor="let lap of laptop">
+        {{lap | lowercase}}
+    </li>
+</ol>
+<h2>Angualar pipes </h2>
+<span> TodayDate = {{todaydate}} </span> <br>
+<span> Full date = {{todaydate | date: 'full' }} </span><br>
+<span> short date = {{todaydate | date:'short'}} </span><br>
+<span> medium date = {{todaydate | date:'medium'}} </span><br>
+<span> Time = {{todaydate | date:'hh:mm:'}}</span><br>
+<span> Time = {{todaydate | date:'hh:mm:ss'}}</span>
+
+<h2>slice</h2>
+<p> {{months }}</p>
+<p> {{months | slice:2:5 }}</p> -->
+
